@@ -235,13 +235,16 @@ nav {
 
 .hero-container {
     display: flex;
+    flex-direction: row; /* 确保默认是水平布局 */
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    width: 100%;
+    padding: 0 10px; /* 增加一些内边距 */
 }
 
 .hero-content {
-    flex: 1;
+    flex: 0 1 55%; /* 控制文本区域占比略大 */
     max-width: 600px;
 }
 
@@ -262,16 +265,16 @@ nav {
 }
 
 .hero-image {
-    flex: 1;
+    flex: 0 1 45%; /* 控制图片区域比例 */
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+    max-width: 45%; /* 与flex比例保持一致 */
 }
 
 .hero-image .placeholder-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px; /* 限制最大宽度 */
     height: 300px;
 }
 
@@ -679,12 +682,12 @@ footer {
 @media (max-width: 992px) {
     .hero {
         height: auto;
-        margin-top: 70px;
-        padding: 60px 0;
+        padding-top: 100px;
+        padding-bottom: 50px;
     }
     
     .hero-container {
-        flex-direction: column;
+        flex-direction: column; /* 在小屏幕上改为垂直布局 */
         text-align: center;
     }
     
@@ -699,7 +702,11 @@ footer {
     }
     
     .hero-image {
-        max-width: 80%;
+        max-width: 100%;
+    }
+    
+    .hero-image .placeholder-image {
+        margin: 0 auto;
     }
     
     .about-content {
