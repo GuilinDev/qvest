@@ -8,6 +8,12 @@ function showMenu() {
     const navLinks = document.getElementById('navLinks');
     if (navLinks) {
         navLinks.style.right = '0';
+        
+        // 显示关闭按钮
+        const closeButton = navLinks.querySelector('.close-menu');
+        if (closeButton) {
+            closeButton.style.display = 'block';
+        }
     }
 }
 
@@ -15,6 +21,12 @@ function hideMenu() {
     const navLinks = document.getElementById('navLinks');
     if (navLinks) {
         navLinks.style.right = '-250px';
+        
+        // 隐藏关闭按钮
+        const closeButton = navLinks.querySelector('.close-menu');
+        if (closeButton) {
+            closeButton.style.display = 'none';
+        }
     }
 }
 
@@ -24,6 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.getElementById('navLinks');
     if (navLinks) {
         navLinks.style.right = '-250px';
+        
+        // 确保初始状态下关闭按钮是隐藏的
+        const closeButton = navLinks.querySelector('.close-menu');
+        if (closeButton) {
+            closeButton.style.display = 'none';
+        }
     }
     
     // 平滑滚动到锚点

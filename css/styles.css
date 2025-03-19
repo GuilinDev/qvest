@@ -206,7 +206,14 @@ nav {
     width: 100%;
 }
 
-.close-menu,
+/* 强制在所有视图下隐藏关闭按钮，只在特定条件下显示 */
+.close-menu {
+    display: none !important;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-dark);
+}
+
 .menu-icon .fa-bars {
     display: none;
     cursor: pointer;
@@ -711,11 +718,17 @@ footer {
         display: block;
     }
     
+    /* 移动菜单打开时才显示关闭按钮 */
     .close-menu {
         position: absolute;
         top: 20px;
         right: 20px;
-        display: block;
+        display: none !important; /* 默认隐藏 */
+    }
+    
+    /* 只有当导航显示在屏幕上时才显示关闭按钮 */
+    .nav-links[style*="right: 0"] .close-menu {
+        display: block !important;
     }
     
     .stat-box {
