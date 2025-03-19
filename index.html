@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qvest - Bridging Academia and Industry</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>qvest</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bridging the Gap Between <span class="highlight">Academia</span> and <span class="highlight">Industry</span></h1>
+            <p>Empowering recent graduates with real-world AI & ML project experience</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Our Services</a>
+                <a href="#contact" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for hero image -->
+            <div class="placeholder-image">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span class="highlight">Qvest</span></h2>
+                <p>Your Bridge to Industry-Ready Skills</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Qvest is a leading consulting firm based in Pennsylvania dedicated to bridging the gap between academic learning and industry requirements. We specialize in providing industry-grade ML & AI projects to recent graduates and researchers, helping them transition smoothly into professional environments.</p>
+                    <p>Our mission is to equip talented individuals with the practical experience they need to excel in their careers, while also helping the industry identify and nurture exceptional talent.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>50+</h3>
+                        <p>Successful Projects</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>200+</h3>
+                        <p>Students Mentored</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>85%</h3>
+                        <p>Placement Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Services</span></h2>
+                <p>Comprehensive Training and Experience Programs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Industry Projects</h3>
+                    <p>Work on real-world AI & ML projects sourced from our industry partners.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Mentorship</h3>
+                    <p>Receive guidance from experienced professionals in the field.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Technical Training</h3>
+                    <p>Enhance your skills with specialized workshops and training sessions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Networking</h3>
+                    <p>Connect with industry professionals and expand your professional network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="highlight">Projects</span></h2>
+                <p>Real-world Applications and Solutions</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image placeholder-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Predictive Analytics Platform</h3>
+                        <p>A machine learning solution for retail sales prediction and inventory management.</p>
+                        <div class="tags">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image placeholder-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>NLP Document Analysis</h3>
+                        <p>An AI-powered tool for analyzing and extracting insights from legal documents.</p>
+                        <div class="tags">
+                            <span>NLP</span>
+                            <span>BERT</span>
+                            <span>PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image placeholder-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Financial Risk Assessment</h3>
+                        <p>A deep learning system for credit risk evaluation and fraud detection.</p>
+                        <div class="tags">
+                            <span>Deep Learning</span>
+                            <span>Financial Analysis</span>
+                            <span>Keras</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success <span class="highlight">Stories</span></h2>
+                <p>What Our Alumni Say About Us</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Qvest provided me with the hands-on experience I needed to land my dream job at a tech giant. The mentorship and projects were invaluable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image placeholder-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Alex Johnson</h4>
+                            <p>Data Scientist at Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The projects at Qvest are challenging and incredibly relevant. They helped me bridge the gap between my academic knowledge and industry requirements."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image placeholder-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Miller</h4>
+                            <p>ML Engineer at Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a recent graduate, I was struggling to find opportunities to apply my skills. Qvest's program gave me the confidence and portfolio I needed to succeed."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image placeholder-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>AI Researcher at Amazon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in <span class="highlight">Touch</span></h2>
+                <p>Start Your Journey With Us</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>1234 Innovation Drive, Pittsburgh, PA</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@qvest.io</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (412) 555-7890</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>I am interested in</option>
+                                <option value="industry-projects">Industry Projects</option>
+                                <option value="mentorship">Mentorship</option>
+                                <option value="technical-training">Technical Training</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>qvest</h2>
+                    <p>Bridging Academia and Industry</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Qvest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
