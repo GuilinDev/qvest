@@ -223,19 +223,26 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
     background-color: var(--bg-white);
     overflow: hidden;
     position: relative;
-    margin-top: 60px;
+    margin-top: 80px;  /* 为顶部导航栏留出空间 */
+    padding: 40px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 50px;
+    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -256,7 +263,16 @@ nav {
 
 .hero-image {
     flex: 1;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.hero-image .placeholder-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
 }
 
 /* About Section */
@@ -649,28 +665,41 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
+/* Media Queries */
+@media (max-width: 1200px) {
     .hero-content h1 {
         font-size: 3rem;
+    }
+    
+    .hero-image {
+        max-width: 45%;
     }
 }
 
 @media (max-width: 992px) {
     .hero {
+        height: auto;
+        margin-top: 70px;
+        padding: 60px 0;
+    }
+    
+    .hero-container {
         flex-direction: column;
         text-align: center;
-        padding-top: 100px;
-        height: auto;
     }
     
     .hero-content {
         padding-right: 0;
         margin-bottom: 50px;
+        max-width: 100%;
     }
     
     .hero-buttons {
         justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 80%;
     }
     
     .about-content {
@@ -685,6 +714,18 @@ footer {
 @media (max-width: 768px) {
     section {
         padding: 60px 0;
+    }
+    
+    .hero {
+        margin-top: 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image {
+        max-width: 100%;
     }
     
     .section-header h2 {
