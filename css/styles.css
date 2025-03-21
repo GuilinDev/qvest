@@ -168,6 +168,17 @@ nav {
     padding: 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
 .logo h1 {
     font-size: 2rem;
     margin: 0;
@@ -276,6 +287,20 @@ nav {
     width: 100%;
     max-width: 450px; /* 限制最大宽度 */
     height: 300px;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.hero-img:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* About Section */
@@ -391,8 +416,20 @@ nav {
 }
 
 .project-image {
-    height: 200px;
+    height: 220px;
     width: 100%;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .project-info {
@@ -602,6 +639,12 @@ footer {
     color: var(--text-lighter);
 }
 
+.footer-logo img {
+    height: 35px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
 .footer-links h3, .footer-newsletter h3 {
     color: white;
     margin-bottom: 20px;
@@ -666,6 +709,13 @@ footer {
 .footer-bottom p {
     color: var(--text-lighter);
     font-size: 0.9rem;
+}
+
+.footer-site-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* Media Queries */
@@ -790,6 +840,10 @@ footer {
     .footer-content {
         flex-direction: column;
     }
+    
+    .site-logo {
+        height: 45px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -863,5 +917,205 @@ footer {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Internship Section */
+.internship {
+    background-color: var(--bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.internship-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.internship-text {
+    flex: 1;
+}
+
+.internship-text h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.internship-benefits {
+    list-style: none;
+    margin: 25px 0 35px;
+}
+
+.internship-benefits li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.internship-benefits li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.internship-gallery {
+    flex: 1;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    height: 200px;
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .internship-content {
+        flex-direction: column;
+    }
+    
+    .internship-gallery {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mentoring Section */
+.mentoring {
+    background-color: var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.mentoring-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mentoring-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mentoring-intro p {
+    font-size: 1.2rem;
+}
+
+.mentoring-types {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.mentoring-type {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.mentoring-type.reverse {
+    flex-direction: row-reverse;
+}
+
+.mentoring-image {
+    flex: 1;
+    height: 350px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.mentoring-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.mentoring-type:hover .mentoring-img {
+    transform: scale(1.05);
+}
+
+.mentoring-info {
+    flex: 1;
+}
+
+.mentoring-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.mentoring-features {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.mentoring-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.mentoring-features li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.mentoring-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+    .mentoring-type, 
+    .mentoring-type.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .mentoring-image {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mentoring-image {
+        height: 250px;
     }
 } 
