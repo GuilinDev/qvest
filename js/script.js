@@ -32,6 +32,14 @@ function hideMenu() {
 
 // 页面加载后初始化所有功能
 document.addEventListener('DOMContentLoaded', function() {
+    // 检查URL中是否有锚点，如果有且是页面刚加载，则移除锚点并回到顶部
+    if (window.location.hash) {
+        // 移除URL中的锚点但不触发页面跳转
+        history.replaceState('', document.title, window.location.pathname + window.location.search);
+        // 确保页面滚动到顶部
+        window.scrollTo(0, 0);
+    }
+    
     // 确保移动菜单正确初始化
     const navLinks = document.getElementById('navLinks');
     if (navLinks) {
@@ -59,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 设置平滑滚动
 function setupSmoothScrolling() {
-    const navLinkElements = document.querySelectorAll('nav a');
+    // 选择所有带有锚点链接的元素，不仅仅是导航栏内的
+    const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     
-    navLinkElements.forEach(link => {
+    anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -73,10 +82,16 @@ function setupSmoothScrolling() {
                     top: targetSection.offsetTop - 80, // Adjust for header height
                     behavior: 'smooth'
                 });
+                
+                // 更新URL但不重新加载页面
+                history.pushState(null, null, targetId);
             }
             
             // 在移动设备上点击链接后关闭菜单
-            hideMenu();
+            if (document.getElementById('navLinks') && 
+                document.getElementById('navLinks').style.right === '0px') {
+                hideMenu();
+            }
         });
     });
 }
