@@ -78,9 +78,10 @@
                         <h3>200+</h3>
                         <p>Students Mentored</p>
                     </div>
-                    <div class="stat-box">
+                    <div class="stat-box" id="research-papers-box">
                         <h3>20+</h3>
                         <p>Research Papers</p>
+                        <button class="view-details-btn" onclick="openPapersModal()">View Papers</button>
                     </div>
                 </div>
             </div>
@@ -438,6 +439,53 @@
             </div>
         </div>
     </footer>
+
+    <!-- Research Papers Modal -->
+    <div id="papers-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePapersModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Our Research <span class="highlight">Publications</span></h2>
+                <p>Contributions to the academic and industry communities</p>
+            </div>
+            <div class="modal-body">
+                <div class="papers-list">
+                    <!-- 研究论文列表 -->
+                    <div class="paper-item">
+                        <div class="paper-meta">
+                            <span class="paper-year">2023</span>
+                            <span class="paper-journal">Journal of Machine Learning Research</span>
+                        </div>
+                        <h3 class="paper-title">Scalable Transformer Models for Multi-modal Clinical Data Analysis</h3>
+                        <p class="paper-authors">Zhang, G., Johnson, A., & Smith, R.</p>
+                        <p class="paper-abstract">This paper introduces a novel transformer-based architecture for processing and integrating diverse clinical data types, demonstrating significant improvements in diagnostic accuracy and interpretability compared to previous methods. Our approach leverages self-supervised pre-training on large unlabeled datasets followed by task-specific fine-tuning.</p>
+                        <div class="paper-tags">
+                            <span>Transformers</span>
+                            <span>Healthcare AI</span>
+                            <span>Multi-modal Learning</span>
+                        </div>
+                        <a href="#" class="paper-link" target="_blank">View Publication <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                    <div class="paper-item">
+                        <div class="paper-meta">
+                            <span class="paper-year">2022</span>
+                            <span class="paper-journal">Proceedings of NeurIPS</span>
+                        </div>
+                        <h3 class="paper-title">Uncertainty-Aware Reinforcement Learning for Adaptive Clinical Decision Support</h3>
+                        <p class="paper-authors">Li, H., Zhang, G., & Wang, T.</p>
+                        <p class="paper-abstract">We propose a novel reinforcement learning framework that explicitly models uncertainty in clinical decision-making processes. By incorporating Bayesian principles into policy optimization, our approach provides more robust treatment recommendations while adapting to individual patient trajectories. Evaluations on critical care datasets show our method outperforms existing approaches in terms of recommended treatment efficacy and safety margins.</p>
+                        <div class="paper-tags">
+                            <span>Reinforcement Learning</span>
+                            <span>Bayesian Methods</span>
+                            <span>Clinical Decision Support</span>
+                        </div>
+                        <a href="#" class="paper-link" target="_blank">View Publication <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

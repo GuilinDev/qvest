@@ -220,4 +220,54 @@ function setupForms() {
             }
         });
     });
+}
+
+// Research Papers Modal Functions
+function openPapersModal() {
+    const modal = document.getElementById('papers-modal');
+    if (modal) {
+        document.body.style.overflow = 'hidden'; // 防止背景滚动
+        modal.style.display = 'block';
+        
+        // 添加过渡动画效果
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        
+        // 添加ESC键关闭模态框
+        document.addEventListener('keydown', handleEscKeyPress);
+        
+        // 添加点击模态框外部关闭
+        modal.addEventListener('click', handleOutsideClick);
+    }
+}
+
+function closePapersModal() {
+    const modal = document.getElementById('papers-modal');
+    if (modal) {
+        modal.classList.remove('show');
+        
+        // 等待过渡完成后隐藏模态框
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // 恢复背景滚动
+        }, 300);
+        
+        // 移除事件监听器
+        document.removeEventListener('keydown', handleEscKeyPress);
+        modal.removeEventListener('click', handleOutsideClick);
+    }
+}
+
+function handleEscKeyPress(e) {
+    if (e.key === 'Escape') {
+        closePapersModal();
+    }
+}
+
+function handleOutsideClick(e) {
+    // 仅当点击模态框背景而非内容区域时关闭
+    if (e.target === document.getElementById('papers-modal')) {
+        closePapersModal();
+    }
 } 
